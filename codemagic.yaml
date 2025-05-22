@@ -1,0 +1,12 @@
+
+workflows:
+  android-workflow:
+    name: Android APK Build
+    environment:
+      vars:
+        JAVA_VERSION: 17
+    scripts:
+      - name: Build release APK
+        script: ./gradlew assembleRelease
+    artifacts:
+      - app/build/outputs/apk/release/app-release.apk
